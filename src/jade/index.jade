@@ -1,0 +1,39 @@
+include template/_mixins.jade
+extends template/_default.jade
+
+block append css
+  +ex_css('http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext')
+  +ex_css('http://fonts.googleapis.com/css?family=Poiret+One')
+block append hjs
+  +jsF('main.js')
+
+block contents
+  header
+    .container
+      .left Go Algo
+      .right 
+        a(href="#") Overview
+        a(href="#") Team
+        a(href="#") Contact us
+  section#landing
+    h1 goALgo
+    h2 Interact with core computer science concepts
+    img#langingImg(src='./assets/images/bg.jpg', alt="landing bg")
+  section#second
+    h1#sortTitle CS is hard?
+    h2 We make it easier than you can imagine.
+    svg#sort
+    h2 By rearranging it for you.
+  //- section#third
+  //-   h1 Thrid
+  //-   h2 Thrid
+  //-   svg
+  //-   h2 Thrid
+  //- section#forth
+  //-   h1 Forth
+  //-   h2 Forth
+  //-   svg
+  //-   h2 Forth
+  section#team
+    h1 Our Team
+  footer
