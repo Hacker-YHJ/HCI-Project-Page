@@ -35,6 +35,9 @@ header
   .container
     margin: 0 auto
     width: 960px
+    @media only screen and (max-device-width: 480px)
+      width: 320px
+      overflow: hidden
     height: 60px
 
   svg
@@ -75,6 +78,8 @@ section
   z-index: 2
   img
     width: 720px
+    @media only screen and (max-device-width: 480px)
+      width: 320px
     will-change: transform
   h1
     transition: color 0.4s ease-in-out
@@ -86,17 +91,25 @@ section
 
 #team
   height: 640px
+  @media only screen and (max-device-width: 480px)
+    height: 860px
 
 #teamContainer
   margin: 0 auto
   padding-top: 100px
-  width: 960px
+  width: 100%
   height: 400px
+  @media only screen and (max-device-width: 480px)
+    height: 640px
 
 .teamItem
   float: left
   width: 33%
   text-align: center
+  @media only screen and (max-device-width: 480px)
+    float: none
+    width: 100%
+    padding-bottom: 24px
 
   *::selection
     color: #F6342B
@@ -121,6 +134,8 @@ section
 svg
   height: 400px
   width: 960px
+  @media only screen and (max-device-width: 480px)
+    display: none
 
 h1
   font-family: 'Poiret One', 'Helvetica Neue', helvetica, sans-serif
@@ -159,6 +174,6 @@ footer
 
   p
     padding: 20px
-    
+
     &::selection
       color: #F6342B
