@@ -4,8 +4,7 @@ html, body
   font-family: 'Helvetica Neue', helvetica, sans-serif
 
 ::selection
-  background: #333
-  color: white
+  background: #CCC
 
 a:visited,
 a:active,
@@ -15,6 +14,9 @@ a:link
   color: inherit
 
 header
+  *::selection
+    color: #03CCFA
+
   height: 60px
   width: 100%
   position: fixed
@@ -24,17 +26,30 @@ header
   box-shadow: 0px 0.5px 1px #CCC
   color: white
 
+  .grey
+    color: #555
+
+    &::selection
+      color: #F6342B
+
   .container
     margin: 0 auto
     width: 960px
     height: 60px
 
+  svg
+    float: left
+    width: 64px
+    height: 64px
+    padding-right: 24px
+
   .left
-    position: absolute
+    float: left
     font-size: 32px
     line-height: 60px
     letter-spacing: 2px
     font-weight: lighter
+
 
   .right
     float: right
@@ -69,6 +84,40 @@ section
 #second
   z-index: 1
 
+#team
+  height: 640px
+
+#teamContainer
+  margin: 0 auto
+  padding-top: 100px
+  width: 960px
+  height: 400px
+
+.teamItem
+  float: left
+  width: 33%
+  text-align: center
+
+  *::selection
+    color: #F6342B
+
+  img
+    width: 96px
+    height: 96px
+    border-radius: 64px
+
+  p
+    font-size: 28px
+    padding-top: 24px
+    white-space: nowrap
+    font-weight: lighter
+    text-align: center
+
+  sub
+    font-size: 12px
+    text-align: center
+    color: #ccc
+
 svg
   height: 400px
   width: 960px
@@ -78,6 +127,9 @@ h1
   padding-top: 92px
   font-size: 48px
   z-index: 3
+
+  &::selection
+    color: #F6342B
 
 h2
   z-index: 3
@@ -89,27 +141,24 @@ h2
   letter-spacing: 1px
   transition: color 1s cubic-bezier(0.4, 0, 0.2, 1)
 
+  &::selection
+    color: #03CCFA
+
 sub
   display: block
   padding-top: 20px
   font-size: 24px
 
-foot
+footer
+  position: relative
+  box-shadow: 0px -0.5px 1px #CCC
+  z-index: 999
+  background: black
+  color: #03CCFA
   text-align: center
 
-  a
-    display: block
-    margin: 0 auto
-    padding-top: 20px
-    line-height: 32px
-    font-size: 16px
-    text-transform: uppercase
-    text-decoration: none
-    font-style: italic
-    color: #333
-
-    &:hover,
-    &:visited,
-    &:active
-      text-decoration: none
-      color: #333
+  p
+    padding: 20px
+    
+    &::selection
+      color: #F6342B

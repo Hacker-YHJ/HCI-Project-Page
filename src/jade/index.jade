@@ -10,7 +10,9 @@ block append hjs
 block contents
   header
     .container
+      include svg/logo.svg
       .left Go Algo
+        span.grey rithm
       .right 
         a(href="#") Overview
         a(href="#") Team
@@ -18,22 +20,37 @@ block contents
   section#landing
     h1 goALgo
     h2 Interact with core computer science concepts
-    img#langingImg(src='./assets/images/bg.jpg', alt="landing bg")
+    img#langingImg(src='./assets/images/bg.jpg', alt='landing bg')
   section#second
-    h1#sortTitle CS is hard?
-    h2 We make it easier than you can imagine.
+    h1#sortTitle CS is complex?
+    h2 We make it easier than you can imagine
     svg#sort
-    h2 By rearranging it for you.
-  //- section#third
-  //-   h1 Thrid
-  //-   h2 Thrid
-  //-   svg
-  //-   h2 Thrid
-  //- section#forth
-  //-   h1 Forth
-  //-   h2 Forth
-  //-   svg
-  //-   h2 Forth
+    h2 by rearranging it.
+  section#third
+    h1#popingTitle Too many things to learn?
+    h2 We pop out all unnecessities
+    svg#stack
+    h2 to offer the pith of CS in the minimum size.
+  section#forth
+    h1#queueTitle Don't know where to start?
+    h2 We enqueue unorganized terms and concepts
+    svg#queue
+    h2 to illuminate your next step.
   section#team
     h1 Our Team
+    #teamContainer
+      .teamItem
+        img(src='./assets/images/avatar_thomas.jpg', alt='avatar')
+        p Thomas Yang
+        sub He drinks coffee and codes
+      .teamItem
+        img(src='./assets/images/avatar_inna.jpg', alt='avatar')
+        p Inna Shteinbuk
+        sub lalala
+      .teamItem
+        img(src='./assets/images/avatar_matt.jpg', alt='avatar')
+        p Matt Zhang
+        sub lalala
+      
   footer
+    p Made with ♥ by Thomas Yang, Inna Shteinbuk, Matt Zhang in 2017

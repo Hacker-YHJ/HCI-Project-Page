@@ -58,12 +58,12 @@ class SortingShow
         .data @circles, (v) -> v.id
         .transition()
         .duration 300
-        .ease 'easeInOutCubic'
+        .ease 'linear'
         .attr 'x', (v, i) -> v.cx*(i+1) - v.w
     else if action.type is 'pivot'
       for func in @pivotCallbackFunc
         func(@circles[action.val].color)
-      @circles[action.val].h *= 6
+      @circles[action.val].h *= 8
       @circles[action.val].pivot = true
       @$svg.selectAll 'rect'
         .data @circles, (v) -> v.id

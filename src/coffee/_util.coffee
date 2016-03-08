@@ -23,7 +23,10 @@ Util =
     else
       object["on"+type] = callback
 
-  loopFunc: (delay, func) ->
-    setInterval func, delay
+  loopFunc: (loopTime, func) ->
+    setInterval func, loopTime
+
+  loopFuncWithDelay: (delay, loopTime, func) ->
+    setTimeout Util.loopFunc.bind(@, loopTime, func), delay
 
 exports = module.exports = Util
